@@ -239,6 +239,38 @@
     <span class="k">print</span> <span class="n">atr</span><span class="o">.</span><span class="n">get_section</span><span class="p">()</span>
     <span class="k">print</span> <span class="n">atr</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 </pre></div>
+
+
+<p>下面进行简单的演示</p>
+<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">new_config</span> <span class="kn">import</span> <span class="n">config</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">config</span><span class="p">(</span><span class="s">&#39;sss&#39;</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s">&quot;new_config.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">17</span><span class="p">,</span> <span class="ow">in</span> <span class="n">__init__</span>
+    <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">Configfile</span><span class="p">),</span><span class="s">&quot;the config file is not exist&quot;</span>
+<span class="ne">AssertionError</span><span class="p">:</span> <span class="n">the</span> <span class="n">config</span> <span class="nb">file</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">exist</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="err">如果</span><span class="n">config</span><span class="err">不存在，会抛出异常</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">config</span><span class="p">(</span><span class="s">&#39;config.ini&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="p">{</span><span class="s">&quot;host&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s">&quot;host2&quot;</span><span class="p">:</span> <span class="s">&quot;root@Datayun9332@10.173.83.111@22&quot;</span><span class="p">,</span> <span class="s">&quot;host1&quot;</span><span class="p">:</span> <span class="s">&quot;root@Datayun9332@10.117.2.194@22&quot;</span><span class="p">}}</span>
+
+
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="s">&#39;host&#39;</span><span class="p">]</span>
+<span class="p">{</span><span class="s">&#39;host2&#39;</span><span class="p">:</span> <span class="s">&#39;root@Datayun9332@10.173.83.111@22&#39;</span><span class="p">,</span> <span class="s">&#39;host1&#39;</span><span class="p">:</span> <span class="s">&#39;root@Datayun9332@10.117.2.194@22&#39;</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="s">&#39;hostname&#39;</span><span class="p">][</span><span class="s">&#39;liangyouqiao&#39;</span><span class="p">]</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s">&quot;new_config.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">66</span><span class="p">,</span> <span class="ow">in</span> <span class="n">__getitem__</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&quot;the </span><span class="si">%s</span><span class="s"> is not exist!!!&quot;</span><span class="o">%</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">ValueError</span><span class="p">:</span> <span class="n">the</span> <span class="n">hostname</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">exist</span><span class="err">!!!</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+
+
+<p>```</p>
                 </div><!-- /.entry-content -->
         </article>
 </section>
