@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>liangyouqiao</title><link href="/" rel="alternate"></link><link href="/feeds/uncategorized.atom.xml" rel="self"></link><id>/</id><updated>2015-10-09T14:26:00+08:00</updated><entry><title>Hello</title><link href="/articles/hello.html" rel="alternate"></link><updated>2015-10-09T14:26:00+08:00</updated><author><name>liangyouqiao</name></author><id>tag:,2015-10-09:articles/hello.html</id><summary type="html">&lt;h2&gt;类和元类的学习的分享&lt;/h2&gt;
+&lt;h3&gt;类的相关&lt;/h3&gt;
+&lt;h4&gt;关于类常用的方法&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;getattr( ),  setattr( ) ,hasattr( ) ,delattr( )
+getattr(instance,method/value,' message')&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;A&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;liangyouqiao&amp;#39;&lt;/span&gt;
+
+        &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;this is a A class method&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;上面是一个简单的python类，用上面的例子来演示方法&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;inst&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="nb"&gt;getattr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inst&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Pelican"></category><category term="Markdown"></category></entry></feed>
